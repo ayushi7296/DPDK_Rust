@@ -23,7 +23,13 @@ Set the RTE_SDK and RTE_TARGET environment variables.
     export RTE_SDK=/path/to/dpdk
     export RTE_TARGET=x86_64-native-linuxapp-gcc
 ```
+4. Hugepages Setup:
 
-
+DPDK requires hugepages to be configured.
+```
+    sudo sh -c "echo 1024 > /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages"
+    sudo mkdir -p /mnt/huge
+    sudo mount -t hugetlbfs nodev /mnt/huge
+```
 
 
