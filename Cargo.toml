@@ -1,0 +1,12 @@
+[package]
+name = "DPDK_Rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libc = "0.2"  # For FFI
+
+[build-dependencies]
+bindgen = "0.59"  # For generating bindings
+pkg-config = "0.3"
+    
